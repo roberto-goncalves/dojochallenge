@@ -25,3 +25,5 @@ And another thing that is bothering me is that index.html shared between service
 docker-compose build
 
 docker-compose up
+
+Web-page on port 60005
