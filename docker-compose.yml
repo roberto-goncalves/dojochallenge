@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  apache:
+     image: httpd:2.4
+     volumes:
+     - ./index.html:/usr/local/apache2/htdocs/index.html
+     ports:
+     - 60005:80
+  webscrapper: 
+     build: ./webscrapper
+     volumes:
+     - ./index.html:/usr/src/app/index.html
+     env_file:
+       - webscrapper.env
